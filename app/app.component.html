@@ -11,10 +11,22 @@
 </header>
 <main>
 <div class="row">
+
   <div class="jumbotron">
-    <h1>{{message}}</h1>
+    <child (notifyParent)="getNotification($event)"></child>
   </div>
 </div>
+<h1>Child message: {{message}}</h1>
+
+<hr>
+
+<button class="btn btn-success" (click)="callChild()">Noti My Child</button>
+<span>Told my Child something: </span><input type="text" [(ngModel)]="childMessage">
+<div class="jumbotron">
+    <parent-child [name]="childMessage"></parent-child>
+</div>
+
+
 
  </main>
 <footer class="text-center">
