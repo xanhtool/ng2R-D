@@ -23,7 +23,7 @@ export class AppComponent {
        this.message =evt
    }
 
-
+  //  =============================
    private childMessage: string;
 
    callChild() {
